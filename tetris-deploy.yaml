@@ -8,14 +8,14 @@ spec:
   replicas: 1 # You can adjust the number of replicas as needed
   selector:
     matchLabels:
-      app: tetris
+      app: esolang/tetris:latest
   template:
     metadata:
       labels:
-        app: tetris
+        app: esolang/tetris:latest
     spec:
       containers:
         - name: tetris
-          image: nasi101/tetrisv3 # Replace with the actual image tag
+          image: esolang/tetris:latest # Replace with the actual image tag
           ports:
             - containerPort: 80 # Replace with the port your Tetris game listens on
